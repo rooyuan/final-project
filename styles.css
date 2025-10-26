@@ -1,0 +1,308 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root{
+	--red: #BF362A;
+	--ice-blue: #ADD9ED;
+	--tan: #A68C76;
+	--lime: #D9D162;
+	--blue: #8BD1D9;
+	--white: #F2F2F2;
+    --dk-gray: #222;
+
+    --title-font: "fiona", sans-serif;
+    --font: "indivisible", "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: var(--ice-blue);
+    font-family: var(--font);
+    color: var(--dk-gray);
+    margin: 0;
+    line-height: 1.5;
+}
+
+header, footer{
+    padding: 1rem;
+    margin: 0 auto;
+    background-color: var(--red);
+    text-align: center;
+}
+
+header {
+    padding: 2rem 0 0 0;
+}
+
+h1 a {
+	font-family: var(--title-font);
+	font-size: 3.5rem;
+    display: inline-block;
+	margin: 0 4rem;
+	text-decoration: none;
+	color: var(--lime);
+    white-space: nowrap;
+}
+
+nav {
+	width: auto;
+    padding: 0 40px;
+    margin: 0;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a{
+    display: block;
+    padding: 1rem 1.75rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: var(--ice-blue);
+    color: var(--red);
+    text-align: center;
+    border-radius: 35px;
+}
+
+nav a:hover {
+    color: var(--red);
+    background-color: var(--lime);
+}
+
+nav a:focus {
+    color: var(--lime);
+    background-color: var(--red);
+}
+
+.header-words {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 2rem;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}
+
+#banner {
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#banner a{
+  display:block;
+  width:100%;
+}
+
+div#banner img {
+    width: 100%;
+    height: 60vh;
+    display: block;
+    object-fit: cover;
+}
+
+main {
+    background-color: var(--ice-blue);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+h2 {
+    font-family: var(--title-font);
+	font-size: 3rem;
+	color: var(--red);
+    font-weight: 500;
+}
+
+h3 {
+    font-family: var(--font);
+    font-size: 1.1rem;
+    color: var(--red);
+    font-style: italic;
+}
+
+section {
+    max-width: 80ch;
+    margin: 0 auto;
+    padding: 1rem 0 2rem;
+}
+
+section#intro {
+    max-width: 60ch;
+}
+
+.amenities,
+.escape {
+    display: grid;
+    gap: 0 1.5rem;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
+    grid-template-columns: minmax(280px, 520px) 1fr;
+    align-items: start;
+    text-align: left;
+}
+
+.amenities img,
+.escape img{
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.amenities p,
+.escape p{
+    grid-column: 2;
+    line-height: 1.6;
+    margin: 0;
+}
+
+#contact img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    padding: 2rem 0 0 0;
+}
+
+#contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+section#form-left,
+section#form-right {
+    text-align: left;
+    font-weight: 700;
+    padding: 1rem;
+    display: block;
+}
+
+
+
+#contact fieldset {
+  border: 1px solid var(--tan);
+  border-radius: 7px;
+  padding: 1rem;
+  margin: 0 auto;
+  width: 90%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"] {
+    width: 95%;
+    height: 20px;
+    border: 1px solid var(--tan);
+    border-radius: 7px;
+}
+
+#contact input[type="text"]:focus,
+#contact input[type="email"]:focus,
+#contact input[type="tel"]:focus {
+    background-color: var(--blue);
+}
+
+#contact input[type="text"]:invalid,
+#contact input[type="email"]:invalid,
+#contact input[type="tel"]:invalid {
+    color: var(--red);
+}
+
+#contact textarea {
+    border: 1px solid var(--tan);
+    border-radius: 7px;
+    width: 95%;
+    min-height: 80px;
+}
+
+#contact input[type="submit"] {
+    grid-area: submit;
+    width: 95%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--lime);
+    background-color: var(--red);
+    border: 1px solid var(--red);
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+#contact input[type="submit"]:hover {
+    background-color: var(--lime);
+    color: var(--red);
+    border: 1px solid var(--lime);
+}
+
+#contact input[type="submit"]:focus {
+    background-color: var(--blue);
+    color: var(--red);
+    border: 1px solid var(--blue);
+}
+
+#contact .required {
+    color: var(--red);
+}
+
+footer {
+    margin: 0 auto;
+    padding: 2rem;
+}
